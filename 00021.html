@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Embed Project</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+			background-color: #57bb8a;
+		}
+
+		iframe {
+			height: 560px;
+			width: 55%;
+		}
+
+		.container {
+			display: flex;
+			justify-content: right;
+			align-items: center;
+			gap: 10px;
+			margin-right: 10px;
+		}
+
+		h6 {
+			margin: 0;
+			text-align: right;
+			color: white;
+			font-family: Arial, sans-serif;
+		}
+
+		.toggle-icon {
+			cursor: pointer;
+			font-size: 12px;
+			user-select: none;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<iframe src="https://turbowarp.org/1093987249/embed?fullscreen-background=green"></iframe>
+
+	<div class="container">
+		<h6 id="text">Embed by Deen Projects</h6>
+		<span id="toggleIcon" class="toggle-icon">❌</span>
+	</div>
+
+	<script>
+		document.getElementById("toggleIcon").addEventListener("click", function () {
+			let h6 = document.getElementById("text");
+			let icon = document.getElementById("toggleIcon");
+
+			if (h6.style.display === "none") {
+				h6.style.display = "white";
+				icon.textContent = "❌";
+			} else {
+				h6.style.display = "none";
+				icon.textContent = "";
+			}
+		});
+	</script>
+
+</body>
+</html>
